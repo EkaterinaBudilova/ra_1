@@ -1,5 +1,5 @@
 const ShopItem = function(props) {
-  const {brand, title, description, price} = props;
+  const {brand, title, description, price} = props.item;
   return (
     <div className='main-content'>
       <h2>{brand}</h2>
