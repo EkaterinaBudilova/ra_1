@@ -6,10 +6,11 @@ const items = [
 
 const app = (
   <div>
-    <Menu items={items} opened />
+    <Menu items={items} opened={true} />
     <Menu items={items} />
   </div>
 );
+
 
 ReactDOM.render(
   app,
