@@ -1,41 +1,14 @@
-const shopItem = function(item) {
-  let content = document.createElement('div');
-
-  let brandEl = document.createElement('h2');
-  let titleEl = document.createElement('h1');
-  let descrEl = document.createElement('h3');
-  let descrFullEl = document.createElement('div');
-  let highlightEl = document.createElement('div'); 
-  let highOverlay = document.createElement('div'); 
-  let dividerEl =  document.createElement('div'); 
-  let purchaseEl = document.createElement('div');
-  let priceEl = document.createElement('div');
-  let addEl = document.createElement('button')
-
-  content.className = 'main-content';
-  descrFullEl.className = 'description';
-  highlightEl.className = 'highlight-window';
-  highlightEl.className = 'mobile';
-  highOverlay.className = 'highlight-overlay';
-  dividerEl.classname = 'divider';
-  purchaseEl.className = 'purchase-info';
-  priceEl.className = 'price';
-
-  brandEl.appendChild(document.createTextNode(`${item.brand}`));
-  titleEl.appendChild(document.createTextNode(`${item.title}`));
-  descrEl.appendChild(document.createTextNode(`${item.description}`));
-  descrFullEl.appendChild(document.createTextNode(`${item.descriptionFull}`));
-  highlightEl.appendChild(highOverlay);
-  purchaseEl.appendChild(priceEl);
-  purchaseEl.appendChild(addEl);
-
-  content.appendChild(brandEl);
-  content.appendChild(titleEl);
-  content.appendChild(descrEl);
-  content.appendChild(descrFullEl);
-  content.appendChild(highlightEl);
-  content.appendChild(dividerEl);
-  content.appendChild(purchaseEl);
-
-  return content;
-}
+const ShopItem = (
+  <div className='main-content'>
+    <h2>{item.brand}</h2>
+    <h1>{item.title}</h1>
+    <h3>{item.description}</h3>
+    <div className='description'> Mens minimalistic overcoat in cotton-blend. Features a stand-up collar, concealed front closure and single back vent. Slim fit with clean, straight shape. Above-knee length. </div>
+    <div className='highlight-window  mobile'><div className='highlight-overlay'></div></div>
+    <div className='divider'></div>
+    <div className='purchase-info'>
+    <div className='price'>{item.price}</div>
+    <button>Добавить в корзину</button>
+  </div>
+</div>
+);
