@@ -1,5 +1,8 @@
 const ShopItem = function(props) {
   const {brand, title, description, price} = props.item;
+//  const priceTwo = Math.round(price * 100) / 100;
+  const priceTwo = price.toFixed(2);
+  console.log(priceTwo);
   return (
     <div className='main-content'>
       <h2>{brand}</h2>
@@ -9,7 +12,7 @@ const ShopItem = function(props) {
       <div className='highlight-window  mobile'><div className='highlight-overlay'></div></div>
       <div className='divider'></div>
       <div className='purchase-info'>
-      <div className='price'>{price}</div>
+      <div className='price'>£{priceTwo}</div>
         <button>Добавить в корзину</button>
       </div>
     </div>

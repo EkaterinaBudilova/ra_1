@@ -1,9 +1,6 @@
 
 const Menu = function({items, opened = false}) {
-  console.log(items);
   if (opened) { 
-    console.log(1);
-    console.log(opened);
     return (
       <div className='menu menu-open'>
         <div className='menu-toggle'><span></span></div>
@@ -17,8 +14,6 @@ const Menu = function({items, opened = false}) {
         </div>
     );
   } else {
-    console.log(2);
-    console.log(opened);
     return (
       <div className='menu'>
         <div className='menu-toggle'><span></span></div>

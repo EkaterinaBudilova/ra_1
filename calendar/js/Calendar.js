@@ -1,4 +1,5 @@
-const Calendar = function() {
+const Calendar = function(now) {
+  console.log(now);
   return (
     <div className='ui-datepicker'>
     <div className='ui-datepicker-material-header'>
